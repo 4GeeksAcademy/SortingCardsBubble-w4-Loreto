@@ -1,5 +1,124 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #388e3c; /* verde suave */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Controles (input + botones) */
+#controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Input de cantidad de cartas */
+input[type="number"] {
+  width: 60px;
+  padding: 4px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Botones */
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: grey;
+  color: #000;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #fdd835;
+}
+
+/* Contenedor principal de cartas */
+#containerRandomCards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+  padding-left: 20px;
+}
+
+/* Contenedor del log */
+#containerLogCards {
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #2e7d32;
+  border-radius: 8px;
+  text-align: left;
+}
+
+#containerLogCards h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Cada fila del log (paso del sort) */
+.log {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* Carta individual */
+.card {
+  width: 80px;
+  height: 120px;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Esquina superior izquierda */
+.card-top-left {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 16px;
+}
+
+/* Esquina inferior derecha */
+.card-bottom-right {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-size: 16px;
+  transform: rotate(180deg);
+}
+
+/* Valor en el centro */
+.card-center-value {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Colores */
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
 }
